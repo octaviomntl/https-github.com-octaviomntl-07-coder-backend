@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 1rem;
+  background-color: antiquewhite;
+}
+body .products {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+body .products .card {
+  margin: 10px;
+}
+body .productsRealTime {
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+body .productsRealTime .card {
+  margin: 10px;
+}
+body .titleChat {
+  text-align: center;
+}
+body .chatContainer {
+  padding-top: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+body .chatContainer header {
+  padding: 15px;
+  height: 10vh;
+}
+body .chatContainer main {
+  width: 100%;
+  padding: 15px;
+}
+body .chatContainer main .chatMessage {
+  width: 100%;
+  height: 50vh;
+  overflow-y: auto;
+  border: 2px solid black;
+}
+body .chatContainer footer {
+  height: 10vh;
+  padding: 15px;
+}

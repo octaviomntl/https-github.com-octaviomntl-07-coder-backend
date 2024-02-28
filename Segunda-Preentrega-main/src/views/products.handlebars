@@ -1,0 +1,30 @@
+<h1>Productos</h1>
+
+<div class="products">
+    {{#each array}}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">Descripción: {{this.description}}</p>
+            <p class="card-price">Precio por unidad: ${{this.price}}</p>
+            <p class="card-category">Categoría: {{this.category}}</p>
+            <p class="card-category">Stock: {{this.stock}}</p>
+            <button type="button" class="btn btn-success" onclick="addToCart('{{this.id}}')">Agregar al carrito</button>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+<script>
+    function addToCart(productId) { 
+        // Realizar la solicitud POST al endpoint del carrito. El carrito es fijo de momento, mas adelante se hara con session o con cookies.
+        fetch(`/api/carts/65d61a0540a0bdbd3b2724f9/products/${productId}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({}),
+        })
+    }
+</script>
+

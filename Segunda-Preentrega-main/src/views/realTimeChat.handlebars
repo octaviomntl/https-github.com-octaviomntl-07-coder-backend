@@ -1,0 +1,21 @@
+<h1 class="titleChat">Chat por websocket</h1>
+
+<div class="chatContainer">
+    <header>
+        <input id="inputName" type="text" placeholder="Nombre">
+        {{!-- <button id="btnName">Set name</button> --}}
+    </header>
+    <main>
+        <div class="chatMessage"></div>
+    </main>
+    <footer>
+        <input type="text" placeholder="Message" id="inputMessage">
+        <button id="btnMessage">Enviar</button>
+    </footer>
+</div>
+
+{{!-- Prender socket desde nuestro Front --}}
+<script src="/socket.io/socket.io.js"></script>
+
+{{!-- Index, script principal --}}
+<script src="/js/chatHandler.mjs"></script>
